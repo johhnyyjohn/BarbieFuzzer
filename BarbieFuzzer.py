@@ -64,7 +64,7 @@ def fuzzer(current_word):
     
 
 try:
-    with open(args.w, 'r') as f: #returns file object (pointer to a file on my hard drive)
+    with open(args.w, 'r') as f:
         word_from_file = (line.strip() for line in f)
         with ThreadPoolExecutor(max_workers=args.t) as executor:
             executor.map(fuzzer, word_from_file)
