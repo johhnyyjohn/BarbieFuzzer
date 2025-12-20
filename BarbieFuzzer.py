@@ -3,11 +3,6 @@ import argparse
 import requests
 import pyfiglet
 
-# ffuf -u http://example.com/nothere/after/FUZZ -w /usr/share/big.txt:FUZZ -t 80
-
-# word   [Status: 200, Size: 20481, Words: 727, Lines: 14, Duration: 1ms]
-
-
 parser = argparse.ArgumentParser(description="Fuzzer made by me")
 parser.add_argument("-w", default="/usr/share/wordlists/dirb/common.txt", help="wordlist")
 parser.add_argument("-u", required=True, type=str, help="target")
