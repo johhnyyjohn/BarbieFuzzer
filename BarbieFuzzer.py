@@ -27,9 +27,9 @@ print(banner)
 print("-" * 50)
 
 print( ":: Method           : GET")
-print(f":: URL             : {args.u}")
-print(f":: Wordlist        : {args.w}")
-print(f":: Threads           : {args.t}")
+print(f":: URL              : {args.u}")
+print(f":: Wordlist         : {args.w}")
+print(f":: Threads          : {args.t}")
 print("-" * 50)
 print()
 
