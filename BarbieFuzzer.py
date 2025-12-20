@@ -26,11 +26,18 @@ banner = pyfiglet.figlet_format("Barbie Fuzzer", font="slant")
 print(banner)
 print("-" * 50)
 
+print( ":: Method           : GET")
+print(f":: URL             : {args.u}")
+print(f":: Wordlist        : {args.w}")
+print(f":: Threads           : {args.t}")
+print("-" * 50)
+print()
 
 def fuzzer(current_word):
     newURL = str(args.u).replace('FUZZ', current_word)
+
     try:
-        response = requests.get(newURL, timeout=5)
+        response = requests.get(newURL, timeout=5, verify=False)
         size = len(response.content)
         words = len(response.text.split())
         lines = len(response.text.splitlines())
